@@ -84,18 +84,23 @@ AutoML draws on many disciplines of machine learning, prominently including
 + #### Meta Learning
   - 2016 | Learning to Optimize | Ke Li, Jitendra Malik | arXiv | [`PDF`](https://arxiv.org/pdf/1606.01885.pdf)
 + #### Reinforcement Learning
+  - 2018 | AMC: AutoML for Model Compression and Acceleration on Mobile Devices | Yihui He, et al. | ECCV | [`PDF`](http://openaccess.thecvf.com/content_ECCV_2018/papers/Yihui_He_AMC_Automated_Model_ECCV_2018_paper.pdf)
   - 2018 | Efficient Neural Architecture Search via Parameter Sharing | Hieu Pham, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1802.03268)
   - 2017 | Neural Architecture Search with Reinforcement Learning | Barret Zoph, Quoc V. Le | ICLR | [`PDF`](https://arxiv.org/pdf/1611.01578.pdf)
 + #### Transfer Learning
   - 2017 | Learning Transferable Architectures for Scalable Image Recognition | Barret Zoph, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1707.07012)
 + #### Network Morphism
   - 2018 | Efficient Neural Architecture Search with Network Morphism | Haifeng Jin, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1806.10282)
++ #### Continuous Optimization
+  - 2018 | Neural Architecture Optimization | Renqian Luo, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1808.07233)
+
 ### Frameworks
 + 2017 | Google Vizier: A Service for Black-Box Optimization | Daniel Golovin, et al. | KDD |[`PDF`](https://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/46180.pdf)
 + 2017 | ATM: A Distributed, Collaborative, Scalable System for Automated Machine Learning | T. Swearingen, et al. | IEEE | [`PDF`](https://cyphe.rs/static/atm.pdf)
 + 2015 | AutoCompete: A Framework for Machine Learning Competitions | Abhishek Thakur, et al. | ICML | [`PDF`](https://arxiv.org/pdf/1507.02188.pdf)
 ### Hyperparameter Optimization
 + #### Bayesian Optimization
+  - 2018 | Efficient High Dimensional Bayesian Optimization with Additivity and Quadrature Fourier Features | Mojmír Mutný, et al. | NeurIPS | [`PDF`](https://papers.nips.cc/paper/8115-efficient-high-dimensional-bayesian-optimization-with-additivity-and-quadrature-fourier-features.pdf)
   - 2018 | High-Dimensional Bayesian Optimization via Additive Models with Overlapping Groups. |  PMLR | [`PDF`](https://arxiv.org/pdf/1802.07028v2.pdf)
   - 2018 | A Tutorial on Bayesian Optimization. | [`PDF`](https://arxiv.org/pdf/1807.02811.pdf)
   - 2016 | Bayesian Optimization with Robust Bayesian Neural Networks | Jost Tobias Springenberg， et al. | NIPS | [`PDF`](https://papers.nips.cc/paper/6117-bayesian-optimization-with-robust-bayesian-neural-networks.pdf)
@@ -159,8 +164,8 @@ AutoML draws on many disciplines of machine learning, prominently including
 + Automated Feature Engineering for Predictive Modeling | Udyan Khurana, etc al. | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resources/slides/%5Bslides%5D-automated-feature-engineering-for-predictive-modeling.pdf)
 ### Hyperparameter Optimization
 #### Bayesian Optimization
-+ Bayesian Optimisation | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resource/slides/%5Bslides%5D-bayesian-optimisation.pdf)
-+ A Tutorial on Bayesian Optimization for Machine Learning | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resource/slides/%5Bslides%5D-a-tutorial-on-bayesian-optimization-for-machine-learning.pdf)
++ Bayesian Optimisation | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resources/slides/%5Bslides%5D-bayesian-optimisation.pdf)
++ A Tutorial on Bayesian Optimization for Machine Learning | [`PDF`](https://github.com/hibayesian/awesome-automl-papers/blob/master/resources/slides/%5Bslides%5D-a-tutorial-on-bayesian-optimization-for-machine-learning.pdf)
 
 # Books
 ### Meta Learning
@@ -192,6 +197,16 @@ AutoML draws on many disciplines of machine learning, prominently including
 + FAR-HO | `Python` | `Open Source` | [`Code`](https://github.com/lucfra/FAR-HO)
 + TransmogrifAI | `Scala` | `Open Source` | [`Code`](https://github.com/salesforce/TransmogrifAI)
 + DEvol | `Python` | `Open Source` | [`Code`](https://github.com/joeddav/devol)
++ HyperparameterHunter | `Python` | `Open Source` | [`Code`](https://github.com/HunterMcGushion/hyperparameter_hunter)
++ NNI | `Python & Typescript` | `Open Source` | [`Code`](https://github.com/Microsoft/nni)
++ Tune | `Python` | `Open Source` | [`Code`](https://github.com/ray-project/ray/tree/master/python/ray/tune) | [`Docs`](http://ray.readthedocs.io/en/latest/tune.html)
++ Milano | `Python` | `Open Source` | [`Code`](https://github.com/NVIDIA/Milano)
++ Katib | `Python` | `Open Source` | [`Code`](https://github.com/kubeflow/katib)
++ nasbot | `Python` | `Open Source` | [`Code`](https://github.com/kirthevasank/nasbot)
++ rbfopt | `Python` | `Open Source` | [`Code`](https://github.com/coin-or/rbfopt)
++ amla | `Python` | `Open Source` | [`Code`](https://github.com/CiscoAI/amla)
++ HpBandSter | `Python` | `Open Source` | [`Code`](https://github.com/automl/HpBandSter)
+
 
 # Prominent Researchers
 + [Frank Hutter](http://aad.informatik.uni-freiburg.de/people/hutter/index.html) | University of Freiburg
@@ -205,6 +220,11 @@ Special thanks to everyone who contributed to this project.
 + [derekflint](https://github.com/derekflint)
 + [Randy Olson](https://github.com/rhiever)
 + [sophia-wright-blue](https://github.com/sophia-wright-blue)
++ [xuehui](https://github.com/xuehui1991)
++ [shaido987](https://github.com/shaido987)
++ [Richard Liaw](https://github.com/richardliaw)
++ [Eric](https://github.com/ffengENG)
++ [Yihui He](https://github.com/yihui-he)
 
 # Licenses
 Awesome-AutoML-Papers is available under Apache Licenses 2.0.
