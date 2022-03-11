@@ -28,22 +28,24 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 
 *AutoML* approaches are already mature enough to rival and sometimes even outperform human machine learning experts. Put simply, *AutoML* can lead to improved performance while saving substantial amounts of time and money, as machine learning experts are both hard to find and expensive. As a result, commercial interest in *AutoML* has grown dramatically in recent years, and several major tech companies and start-up companies are now developing their own *AutoML* systems. An overview comparison of some of them can be summarized to the following table.
 
-| Company    | AutoFE     | HPO        | NAS        |
-| :--------: | :--------: | :--------: | :--------: |
-| 4paradigm  |     √      |      √     |      ×     |
-| Alibaba    |     ×      |      √     |      ×     |
-| Baidu      |     ×      |      ×     |      √     |
-| Google     |     √      |      √     |      √     |
-| H2O.ai     |     √      |      √     |      ×     |
-| Microsoft  |     ×      |      √     |      √     |
-| RapidMiner |     √      |      √     |      ×     |
-| Tencent    |     ×      |      √     |      ×     |
-| Transwarp  |     √      |      √     |      √     |
+| Company       | AutoFE     | HPO        | NAS        |
+| :-----------: | :--------: | :--------: | :--------: |
+| 4paradigm     |     √      |      √     |      ×     |
+| Alibaba       |     ×      |      √     |      ×     |
+| Baidu         |     ×      |      ×     |      √     |
+| Determined AI |     ×      |      √     |      √     |
+| Google        |     √      |      √     |      √     |
+| DataCanvas    |     √      |      √     |      √     |
+| H2O.ai        |     √      |      √     |      ×     |
+| Microsoft     |     ×      |      √     |      √     |
+| MLJAR         |     √      |      √     |      √     |
+| RapidMiner    |     √      |      √     |      ×     |
+| Tencent       |     ×      |      √     |      ×     |
 
 
 **Awesome-AutoML-Papers** includes very up-to-date overviews of the bread-and-butter techniques we need in *AutoML*:
 + Automated Data Clean (Auto Clean)
-+ Automated Feature Enginnering (Auto FE)
++ Automated Feature Engineering (Auto FE)
 + Hyperparameter Optimization (HPO)
 + Meta-Learning
 + Neural Architecture Search (NAS)
@@ -65,32 +67,34 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
   - [Architecture Search](#architecture-search)
     - [Evolutionary Algorithms](#evolutionary-algorithms)
     - [Local Search](#local-search)
-    - [Meta Learning](#meta-learning)
-    - [Reinforcement Learning](#reinforcement-learning)
+    - [Meta Learning](#meta-learning-1)
+    - [Reinforcement Learning](#reinforcement-learning-1)
     - [Transfer Learning](#transfer-learning)
+    - [Network Morphism](#network-morphism)
+    - [Continuous Optimization](#continuous-optimization)
   - [Hyperparameter Optimization](#hyperparameter-optimization)
     - [Bayesian Optimization](#bayesian-optimization)
-    - [Evolutionary Algorithms](#evolutionary-algorithms)
+    - [Evolutionary Algorithms](#evolutionary-algorithms-1)
     - [Lipschitz Functions](#lipschitz-functions)
-    - [Local Search](#local-search)
-    - [Meta Learning](#meta-learning)
+    - [Local Search](#local-search-1)
+    - [Meta Learning](#meta-learning-2)
     - [Particle Swarm Optimization](#particle-swarm-optimization)
     - [Random Search](#random-search)
-    - [Transfer Learning](#transfer-learning)
+    - [Transfer Learning](#transfer-learning-1)
   - [Performance Prediction](#performance-prediction)
     - [Performance Prediction](##)
   - [Frameworks](#frameworks)
   - [Miscellaneous](#miscellaneous)
 + [Tutorials](#tutorials)
   - [Bayesian Optimization](#bayesian-optimization)
-  - [Meta Learning](#meta-learning)
+  - [Meta Learning](#meta-learning-3)
 + [Articles](#articles)
   - [Bayesian Optimization](#bayesian-optimization)
   - [Meta Learning](#meta-learning)
 + [Slides](#slides)
-  - [Bayesian Optimization](#bayesian-optimization)
+  - [Bayesian Optimization](#slides)
 + [Books](#books)
-  - [Meta Learning](#meta-learning)
+  - [Meta Learning](#books)
 + [Projects](#projects)
 + [Prominent Researchers](#prominent-researchers)
 
@@ -100,6 +104,8 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 + 2019 | Survey on Automated Machine Learning | Marc Zoeller, Marco F. Huber | arXiv | [`PDF`](https://arxiv.org/pdf/1904.12054.pdf)
 + 2019 | Automated Machine Learning: State-of-The-Art and Open Challenges | Radwa Elshawi, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1906.02287.pdf)
 + 2018 | Taking Human out of Learning Applications: A Survey on Automated Machine Learning | Quanming Yao, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1810.13306.pdf)
++ 2020 | On Hyperparameter Optimization of Machine Learning Algorithms: Theory and Practice | Li Yang, et al. | Neurocomputing | [`PDF`](https://arxiv.org/pdf/2007.15745.pdf)
++ 2020 | Automated Machine Learning--a brief review at the end of the early years | Escalante, H. J. | arXiv | [`PDF`](https://arxiv.org/pdf/2008.08516.pdf)
 ### Automated Feature Engineering
 + #### Expand Reduce
   - 2017 | AutoLearn — Automated Feature Generation and Selection | Ambika Kaul, et al. | ICDM | [`PDF`](https://ieeexplore.ieee.org/document/8215494/)
@@ -110,13 +116,14 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 + #### Hierarchical Organization of Transformations
   - 2016 | Cognito: Automated Feature Engineering for Supervised Learning | Udayan Khurana, et al. | ICDMW | [`PDF`](http://ieeexplore.ieee.org/document/7836821/)
 + #### Meta Learning
+  - 2020 | AutoML Pipeline Selection: Efficiently Navigating the Combinatorial Space | Chengrun Yang, et al. | KDD | [`PDF`](https://people.ece.cornell.edu/cy/_papers/tensor_oboe.pdf)
   - 2017 | Learning Feature Engineering for Classification | Fatemeh Nargesian, et al. | IJCAI | [`PDF`](https://www.ijcai.org/proceedings/2017/0352.pdf)
 + #### Reinforcement Learning
   - 2017 | Feature Engineering for Predictive Modeling using Reinforcement Learning | Udayan Khurana, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1709.07150.pdf)
   - 2010 | Feature Selection as a One-Player Game | Romaric Gaudel, Michele Sebag | ICML | [`PDF`](https://hal.archives-ouvertes.fr/inria-00484049/document)
 ### Architecture Search
 + #### Evolutionary Algorithms
-  - 2019 | Evolutionary Neural AutoML for Deep Learning | Jason Liang, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1902.06827)
+  - 2019 | Evolutionary Neural AutoML for Deep Learning | Jason Liang, et al. | GECCO | [`PDF`](https://dl.acm.org/doi/pdf/10.1145/3321707.3321721)
   - 2017 | Large-Scale Evolution of Image Classifiers | Esteban Real, et al. | PMLR | [`PDF`](https://arxiv.org/abs/1703.01041)
   - 2002 | Evolving Neural Networks through Augmenting Topologies | Kenneth O.Stanley, Risto Miikkulainen | Evolutionary Computation | [`PDF`](http://nn.cs.utexas.edu/downloads/papers/stanley.ec02.pdf)
 + #### Local Search
@@ -130,12 +137,14 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 + #### Transfer Learning
   - 2017 | Learning Transferable Architectures for Scalable Image Recognition | Barret Zoph, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1707.07012)
 + #### Network Morphism
-  - 2018 | Efficient Neural Architecture Search with Network Morphism | Haifeng Jin, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1806.10282)
+  - 2019 | Auto-Keras: An Efficient Neural Architecture Search System | Haifeng Jin, et al. | KDD | [`PDF`](https://dl.acm.org/doi/pdf/10.1145/3292500.3330648)
 + #### Continuous Optimization
   - 2018 | Neural Architecture Optimization | Renqian Luo, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1808.07233)
   - 2019 | DARTS: Differentiable Architecture Search | Hanxiao Liu, et al. | ICLR | [`PDF`](https://arxiv.org/abs/1806.09055)
 
 ### Frameworks
++ 2019 | Auptimizer -- an Extensible, Open-Source Framework for Hyperparameter Tuning | Jiayi Liu, et al. | IEEE Big Data | [`PDF`](https://arxiv.org/pdf/1911.02522)
++ 2019 | Towards modular and programmable architecture search | Renato Negrinho, et al. | NeurIPS | [`PDF`](https://arxiv.org/pdf/1909.13404.pdf)
 + 2019 | Evolutionary Neural AutoML for Deep Learning | Jason Liang, et al. | arXiv | [`PDF`](https://arxiv.org/abs/1902.06827)
 + 2017 | ATM: A Distributed, Collaborative, Scalable System for Automated Machine Learning | T. Swearingen, et al. | IEEE | [`PDF`](https://cyphe.rs/static/atm.pdf)
 + 2017 | Google Vizier: A Service for Black-Box Optimization | Daniel Golovin, et al. | KDD |[`PDF`](https://static.googleusercontent.com/media/research.google.com/zh-CN//pubs/archive/46180.pdf)
@@ -143,9 +152,19 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 
 ### Hyperparameter Optimization
 + #### Bayesian Optimization
-  - 2018 | A Tutorial on Bayesian Optimization. | [`PDF`](https://arxiv.org/pdf/1807.02811.pdf)
+  - 2020 | Bayesian Optimization of Risk Measures | NeurIPS | [`PDF`](https://proceedings.neurips.cc/paper/2020/file/e8f2779682fd11fa2067beffc27a9192-Paper.pdf)
+  - 2020 | BOTORCH: A Framework for Efficient Monte-Carlo Bayesian Optimization | NeurIPS | [`PDF`](https://proceedings.neurips.cc/paper/2020/file/f5b1b89d98b7286673128a5fb112cb9a-Paper.pdf)
+  - 2020 | Tuning Hyperparameters without Grad Students: Scalable and Robust Bayesian Optimisation with Dragonfly | JMLR | [`PDF`](https://arxiv.org/pdf/1903.06694.pdf)
+  - 2019 | Bayesian Optimization with Unknown Search Space  | NeurIPS | [`PDF`](http://papers.nips.cc/paper/9350-bayesian-optimization-with-unknown-search-space.pdf)
+  - 2019 | Constrained Bayesian optimization with noisy experiments | [`PDF`](https://projecteuclid.org/download/pdfview_1/euclid.ba/1533866666)
+  - 2019 | Learning search spaces for Bayesian optimization: Another view of hyperparameter transfer learning | NeurIPS | [`PDF`](http://papers.nips.cc/paper/9438-learning-search-spaces-for-bayesian-optimization-another-view-of-hyperparameter-transfer-learning.pdf)
+  - 2019 | Practical Two-Step Lookahead Bayesian Optimization | NeurIPS | [`PDF`](http://papers.nips.cc/paper/9174-practical-two-step-lookahead-bayesian-optimization.pdf)
+  - 2019 | Predictive entropy search for multi-objective bayesian optimization with constraints | [`PDF`](https://arxiv.org/pdf/1609.01051.pdf)
+  - 2018 | BOCK: Bayesian optimization with cylindrical kernels | ICML | [`PDF`](https://arxiv.org/pdf/1806.01619.pdf)
   - 2018 | Efficient High Dimensional Bayesian Optimization with Additivity and Quadrature Fourier Features | Mojmír Mutný, et al. | NeurIPS | [`PDF`](https://papers.nips.cc/paper/8115-efficient-high-dimensional-bayesian-optimization-with-additivity-and-quadrature-fourier-features.pdf)
   - 2018 | High-Dimensional Bayesian Optimization via Additive Models with Overlapping Groups. |  PMLR | [`PDF`](https://arxiv.org/pdf/1802.07028v2.pdf)
+  - 2018 | Maximizing acquisition functions for Bayesian optimization | NeurIPS | [`PDF`](http://papers.nips.cc/paper/8194-maximizing-acquisition-functions-for-bayesian-optimization.pdf)
+  - 2018 | Scalable hyperparameter transfer learning | NeurIPS | [`PDF`](http://papers.nips.cc/paper/7917-scalable-hyperparameter-transfer-learning.pdf)
   - 2016 | Bayesian Optimization with Robust Bayesian Neural Networks | Jost Tobias Springenberg， et al. | NIPS | [`PDF`](https://papers.nips.cc/paper/6117-bayesian-optimization-with-robust-bayesian-neural-networks.pdf)
   - 2016 | Scalable Hyperparameter Optimization with Products of Gaussian Process Experts | Nicolas Schilling, et al. | PKDD | [`PDF`](https://link.springer.com/chapter/10.1007/978-3-319-46128-1_3)
   - 2016 | Taking the Human Out of the Loop: A Review of Bayesian Optimization | Bobak Shahriari, et al. | IEEE | [`PDF`](http://ieeexplore.ieee.org/document/7352306/)
@@ -163,6 +182,7 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
   - 2012 | Practical Bayesian Optimization of Machine Learning Algorithms | [`PDF`](https://papers.nips.cc/paper/4522-practical-bayesian-optimization-of-machine-learning-algorithms.pdf)
   - 2011 | Sequential Model-Based Optimization for General Algorithm Configuration(extended version) | [`PDF`](https://www.cs.ubc.ca/~hutter/papers/10-TR-SMAC.pdf)
 + #### Evolutionary Algorithms
+  - 2020 | Delta-STN: Efficient Bilevel Optimization for Neural Networks using Structured Response Jacobians | Juhan Bae, Roger Grosse | Neurips | [`PDF`](https://arxiv.org/abs/2010.13514)
   - 2018 | Autostacker: A Compositional Evolutionary Learning System | Boyuan Chen, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1803.00684.pdf)
   - 2017 | Large-Scale Evolution of Image Classifiers | Esteban Real, et al. | PMLR | [`PDF`](https://arxiv.org/pdf/1703.01041.pdf)
   - 2016 | Automating biomedical data science through tree-based pipeline optimization | Randal S. Olson, et al. | ECAL | [`PDF`](https://arxiv.org/pdf/1601.07925.pdf)
@@ -172,8 +192,9 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 + #### Local Search
   - 2009 | ParamILS: An Automatic Algorithm Configuration Framework | Frank Hutter, et al. | JAIR | [`PDF`](https://arxiv.org/pdf/1401.3492.pdf)
 + #### Meta Learning
-  - 2008 | Cross-Disciplinary Perspectives on Meta-Learning for Algorithm Selection | [`PDF`](https://dl.acm.org/citation.cfm?id=1456656)
+  - 2019 | OBOE: Collaborative Filtering for AutoML Model Selection | Chengrun Yang, et al. | KDD | [`PDF`](https://dl.acm.org/doi/pdf/10.1145/3292500.3330909) 
   - 2019 | SMARTML: A Meta Learning-Based Framework for Automated Selection and Hyperparameter Tuning for Machine Learning Algorithms | [`PDF`](http://openproceedings.org/2019/conf/edbt/EDBT19_paper_235.pdf)
+  - 2008 | Cross-Disciplinary Perspectives on Meta-Learning for Algorithm Selection | [`PDF`](https://dl.acm.org/citation.cfm?id=1456656)
 + #### Particle Swarm Optimization
   - 2017 | Particle Swarm Optimization for Hyper-parameter Selection in Deep Neural Networks | Pablo Ribalta Lorenzo, et al. | GECCO | [`PDF`](https://dl.acm.org/citation.cfm?id=3071208)
   - 2008 | Particle Swarm Optimization for Parameter Determination and Feature Selection of Support Vector Machines | Shih-Wei Lin, et al. | Expert Systems with Applications | [`PDF`](http://www.sciencedirect.com/science/article/pii/S0957417407003752)
@@ -188,11 +209,15 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
   - 2013 | Collaborative Hyperparameter Tuning | R´emi Bardenet, et al. | ICML | [`PDF`](http://proceedings.mlr.press/v28/bardenet13.pdf)
 
 ### Miscellaneous
+- 2020 | Automated Machine Learning Techniques for Data Streams | Alexandru-Ionut Imbrea | [`PDF`](https://github.com/AlexImb/automl-streams-research-paper/raw/master/A_Imbrea_AutoML_Data_Streams.pdf)
 - 2018 | Accelerating Neural Architecture Search using Performance Prediction | Bowen Baker, et al. | ICLR | [`PDF`](https://openreview.net/pdf?id=BJypUGZ0Z)
 - 2017 | Automatic Frankensteining: Creating Complex Ensembles Autonomously | Martin Wistuba, et al. | SIAM | [`PDF`](http://epubs.siam.org/doi/pdf/10.1137/1.9781611974973.83)
+- 2018 | Characterizing classification datasets: A study of meta-features for meta-learning | Rivolli, Adriano, et al. | arXiv | [`PDF`](https://arxiv.org/pdf/1808.10406.pdf)
+- 2020 | Putting the Human Back in the AutoML Loop | Xanthopoulos, Iordanis, et al. | EDBT/ICDT | [`PDF`](http://ceur-ws.org/Vol-2578/ETMLP5.pdf)
 
 # Tutorials
 ### Bayesian Optimization
++ 2018 | A Tutorial on Bayesian Optimization. | [`PDF`](https://arxiv.org/pdf/1807.02811.pdf)
 + 2010 | A Tutorial on Bayesian Optimization of Expensive Cost Functions, with Application to Active User Modeling and Hierarchical Reinforcement Learning | [`PDF`](https://arxiv.org/pdf/1012.2599v1.pdf)
 ### Meta Learning
 + 2008 | Metalearning - A Tutorial | [`PDF`](https://pdfs.semanticscholar.org/5794/1a4891f673cadf06fba02419372aad85c3bb.pdf)
@@ -211,6 +236,12 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 | :--------: | :--------: | :--------: | :--------: | :--------: | :--------: |
 | 2009       | Meta-Learning | Metalearning - Applications to Data Mining | Brazdil, P., Giraud Carrier, C., Soares, C., Vilalta, R. | Springer | [`Download`](http://www.springer.com/la/book/9783540732624) |
 | 2019       | HPO, Meta-Learning, NAS | AutoML: Methods, Systems, Challenges | Frank Hutter, Lars Kotthoff, Joaquin Vanschoren |         | [`Download`](https://www.automl.org/book/) |
+| 2021       | Learning | Automated Machine Learning in Action | Qinquan Song, Haifeng Jin, Xia Hu | Manning Publications        | [`Download`](https://www.manning.com/books/automated-machine-learning-in-action) |
+
+
+# Videos
+| Title    | Author    | Link     |
+| AutoML Basics: Automated Machine Learning in Action | Qinquan Song, Haifeng Jin, Xia Hu | (https://www.youtube.com/watch?v=9KpieG0B7VM) |
 
 
 # Projects
@@ -220,13 +251,18 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 | Advisor    | HPO        | Python     | Apache-2.0 | [`Github`](https://github.com/tobegit3hub/advisor) |
 | AMLA       | HPO, NAS   | Python     | Apache-2.0 | [`Github`](https://github.com/CiscoAI/amla) |
 | ATM        | HPO        | Python     | MIT        | [`Github`](https://github.com/HDI-Project/ATM) |
-| Auger      | HPO        | Python     | Commercial | [`Homepage`](https://auger.ai)
+| Auger      | HPO        | Python     | Commercial | [`Homepage`](https://auger.ai) |
+| auptimizer | HPO, NAS   | Python (support R script) | GPL-3.0  | [`Github`](https://github.com/LGE-ARC-AdvancedAI/auptimizer) |
 | Auto-Keras | NAS        | Python     | [`License`](https://github.com/keras-team/autokeras/blob/master/LICENSE.txt) | [`Github`](https://github.com/keras-team/autokeras) |
 | AutoML Vision | NAS     | Python     | Commercial | [`Homepage`](https://cloud.google.com/vision/) |
 | AutoML Video Intelligence            | NAS        | Python    | Commercial | [`Homepage`](https://cloud.google.com/video-intelligence/) |
 | AutoML Natural Language | NAS        | Python     | Commercial | [`Homepage`](https://cloud.google.com/natural-language/) |
 | AutoML Translation      | NAS        | Python     | Commercial | [`Homepage`](https://cloud.google.com/translate/) |
 | AutoML Tables           | AutoFE, HPO             | Python    | Commercial | [`Homepage`](https://cloud.google.com/automl-tables/) |
+| AutoPyTorch | HPO, NAS   | Python    | Apache-2.0 | [`Github`](https://github.com/automl/Auto-PyTorch) |
+| HyperGBM                | HPO| Python    | Python | [`Github`](https://github.com/DataCanvasIO/HyperGBM/) |
+| HyperKeras              | NAS        | Python    | Python | [`Github`](https://github.com/DataCanvasIO/HyperKeras/) |
+| Hypernets               | HPO, NAS   | Python    | Python | [`Github`](https://github.com/DataCanvasIO/Hypernets/) |
 | auto-sklearn | HPO      | Python     | [`License`](https://github.com/automl/auto-sklearn/blob/master/LICENSE.txt) | [`Github`](https://github.com/automl/auto-sklearn) |
 | auto_ml     | HPO       | Python     | MIT        | [`Github`](https://github.com/ClimbsRocks/auto_ml) |
 | BayesianOptimization | HPO | Python  | MIT        | [`Github`](https://github.com/fmfn/BayesianOptimization) |
@@ -234,6 +270,8 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 | comet       | HPO       | Python     | Commercial | [`Homepage`](https://www.comet.ml) |
 | DataRobot   | HPO       | Python     | Commercial | [`Homepage`](https://www.datarobot.com/) |
 | DEvol       | NAS       | Python     | MIT        | [`Github`](https://github.com/joeddav/devol) |
+| DeepArchitect | NAS     | Python     | MIT        | [`Github`](https://github.com/negrinho/deep_architect) |
+| Determined | HPO, NAS   | Python     | Apache-2.0 | [`Github`](https://github.com/determined-ai/determined) |
 | Driverless AI | AutoFE  | Python     | Commercial | [`Homepage`](https://www.h2o.ai/products/h2o-driverless-ai/) |
 | FAR-HO      | HPO       | Python     | MIT        | [`Github`](https://github.com/lucfra/FAR-HO) |
 | H2O AutoML  | HPO       | Python, R, Java, Scala | Apache-2.0 | [`Github`](https://github.com/h2oai/h2o-3/) |
@@ -245,10 +283,12 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 | Katib       | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/kubeflow/katib) |
 | MateLabs    | HPO       | Python     | Commercial | [`Github`](http://matelabs.in/) |
 | Milano      | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/NVIDIA/Milano) |
-| MLJAR       | HPO       | Python     | Commercial | [`Homepage`](https://mljar.com/) |
+| MLJAR       | AutoFE, HPO, NAS       | Python     | MIT | [`Github`](https://github.com/mljar/mljar-supervised) |
+| mlr3automl       | HPO       | R     | LGPL-3.0 | [`GitHub`](https://github.com/a-hanf/mlr3automl) |
 | nasbot      | NAS       | Python     | MIT        | [`Github`](https://github.com/kirthevasank/nasbot) |
 | neptune     | HPO       | Python     | Commercial | [`Homepage`](https://neptune.ml/) |
 | NNI         | HPO, NAS  | Python     | MIT        | [`Github`](https://github.com/Microsoft/nni) |
+| Oboe    | HPO       | Python     | BSD-3-Clause | [`Github`](https://github.com/udellgroup/oboe) |
 | Optunity    | HPO       | Python     | [`License`](https://github.com/claesenm/optunity/blob/master/LICENSE.txt) | [`Github`](https://github.com/claesenm/optunity) |
 | R2.ai       | HPO       |            | Commercial | [`Homepage`](https://r2.ai/) |
 | RBFOpt      | HPO       | Python     | [`License`](https://github.com/coin-or/rbfopt/blob/master/LICENSE) | [`Github`](https://github.com/coin-or/rbfopt) |
@@ -261,6 +301,8 @@ There are no formal definition of *AutoML*. From the descriptions of most papers
 | Tune        | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/ray-project/ray/tree/master/python/ray/tune) |
 | Xcessiv     | HPO       | Python     | Apache-2.0 | [`Github`](https://github.com/reiinakano/xcessiv) |
 | SmartML     | HPO       | R          | GPL-3.0    | [`Github`](https://github.com/DataSystemsGroupUT/SmartML) |
+| MLBox     | AutoFE, HPO    | Python          | BSD-3 License    | [`Github`](https://github.com/AxeldeRomblay/MLBox) |
+| AutoAI Watson     | AutoFE, HPO    |      | Commercial    | [`Homepage`](https://www.ibm.com/cloud/watson-studio/autoai) |
 
 
 # Slides
@@ -278,15 +320,18 @@ Special thanks to everyone who contributed to this project.
 | :--------: | :--------: |
 | [Alexander Robles](https://github.com/Alro10) | PhD Student @UNICAMP-Brazil |
 | [derekflint](https://github.com/derekflint) | |
+| [endymecy](https://github.com/endymecy) | Senior Researcher @Tencent |
 | [Eric](https://github.com/ffengENG) | |
 | [Erin LeDell](https://github.com/ledell) | Chief Machine Learning Scientist @H2O.ai |
 | [fwcore](https://github.com/fwcore) | |
 | [Gaurav Mittal](https://github.com/g1910) | |
-| [koala](https://github.com/endymecy) | Senior Researcher @Tencent |
+| [Hernan Ceferino Vazquez](https://github.com/hcvazquez) | PhD, Data Science Expert @MercadoLibre |
+| [Kaustubh Damania](https://github.com/KaustubhDamania) | |
 | [Lilian Besson](https://github.com/naereen) | PhD Student @CentraleSupélec |
 | [罗磊](https://github.com/luoleicn) | |
 | [Marc](https://github.com/Ennosigaeon) | |
 | [Mohamed Maher](https://github.com/mmaher22) | |
+| [Neil Conway](https://github.com/neilconway) | CTO @Determined AI |
 | [Richard Liaw](https://github.com/richardliaw) | PhD Student @UC Berkeley|
 | [Randy Olson](https://github.com/rhiever) | Lead Data Scientist @LifeEGX |
 | [Slava Kurilyak](https://github.com/slavakurilyak) | Founder, CEO @Produvia |
